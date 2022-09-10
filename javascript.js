@@ -1,4 +1,4 @@
-let chapterObj = {
+let chaptersObj = {
   prologue: {
     subtitle: "Éveil du capitaine",
     text: ``,
@@ -173,10 +173,11 @@ let chapterObj = {
     img: "assets/",
   },
 };
-function GoToChapter(chapterObj) {
-  console.log(chapterObj[chapterName].subtitle);
-  console.log(chapterObj[chapterName].text);
-  console.log(chapterObj[chapterName].img);
-  console.log(chapterObj[chapterName].options);
+function goToChapter(chapterName) {
+  let chapitre = chaptersObj[chapterName];
+  console.log(chapitre.subtitle);
+  console.log(chapitre.text);
+  console.log(chapitre.img);
+  console.log(chapitre.options);
 }
-GoToChapter();
+goToChapter();
