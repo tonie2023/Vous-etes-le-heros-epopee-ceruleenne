@@ -171,10 +171,11 @@ let chaptersObj = {
     subtitle: "",
     text: ``,
     img: "assets/",
+    options: [{}],
   },
 };
 function goToChapter(chapterName) {
-  let chapitre = chaptersObj[chapterName];
+  const chapitre = chaptersObj[chapterName];
   console.log(chapitre.subtitle);
   console.log(chapitre.text);
   console.log(chapitre.img);
