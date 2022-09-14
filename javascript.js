@@ -175,10 +175,9 @@ let chaptersObj = {
   },
 };
 function goToChapter(chapterName) {
-  const chapitre = chaptersObj[chapterName];
-  console.log(chapitre.subtitle);
-  console.log(chapitre.text);
-  console.log(chapitre.img);
-  console.log(chapitre.options);
+  console.log(chaptersObj[chapterName].subtitle);
+  console.log(chaptersObj[chapterName].text);
+  console.log(chaptersObj[chapterName].img);
+  console.log(chaptersObj[chapterName].options);
 }
 goToChapter();
