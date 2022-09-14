@@ -6,13 +6,13 @@ let chaptersObj = {
     options: [{}],
   },
   depart: {
-    subtitle: "",
+    subtitle: "Préparation",
     text: ``,
     img: "assets/",
     options: [{}],
   },
   equipage: {
-    subtitle: "",
+    subtitle: "Recrutement",
     text: ``,
     img: "assets/",
     options: [{}],
@@ -175,9 +175,10 @@ let chaptersObj = {
   },
 };
 function goToChapter(chapterName) {
-  console.log(chaptersObj[chapterName].subtitle);
-  console.log(chaptersObj[chapterName].text);
-  console.log(chaptersObj[chapterName].img);
-  console.log(chaptersObj[chapterName].options);
+  const chapitre = chapterName;
+  console.log(chaptersObj[chapitre].subtitle);
+  console.log(chaptersObj[chapitre].text);
+  console.log(chaptersObj[chapitre].img);
+  console.log(chaptersObj[chapitre].options);
 }
 goToChapter();
