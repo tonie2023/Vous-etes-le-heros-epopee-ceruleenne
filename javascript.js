@@ -2,7 +2,7 @@ let chaptersObj = {
   prologue: {
     subtitle: "Éveil du capitaine",
     text: ``,
-    img: "assets/",
+    img: "assets/plage.jpg",
     options: [{}],
   },
   depart: {
