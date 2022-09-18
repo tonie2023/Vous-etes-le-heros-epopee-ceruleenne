@@ -20,13 +20,13 @@ let chaptersObj = {
   premier_choix: {
     subtitle: "Le guerrier et la navigatrice",
     text: ``,
-    img: "assets/ assets/",
+    img: "assets/guerrier.jpg assets/navigatrice.jpg",
     options: [{}],
   },
   deuxieme_choix: {
     subtitle: "La guérisseuse et le musicien",
     text: ``,
-    img: "assets/",
+    img: "assets/guerrisseuse assets/musicien.jpg",
     options: [{}],
   },
   embranchement_premier: {
