@@ -6,21 +6,21 @@ let chaptersObj = {
     options: [{}],
   },
   depart: {
-    subtitle: "Préparation",
+    subtitle: "Planification de l'aventure",
     text: ``,
-    img: "assets/",
+    img: "assets/planification.gif",
     options: [{}],
   },
   equipage: {
     subtitle: "Recrutement",
     text: ``,
-    img: "assets/",
+    img: "assets/taverne.webp",
     options: [{}],
   },
   premier_choix: {
     subtitle: "Le guerrier et la navigatrice",
     text: ``,
-    img: "assets/",
+    img: "assets/ assets/",
     options: [{}],
   },
   deuxieme_choix: {
