@@ -38,13 +38,13 @@ let chaptersObj = {
   deuxieme_ile: {
     subtitle: "Emplacement de la deuxième île",
     text: ``,
-    img: "assets/",
+    img: "assets/emplacement.jpg",
     options: [{}],
   },
   premier_objet: {
     subtitle: "La clé",
     text: ``,
-    img: "assets/",
+    img: "assets/coffre.jpg",
     options: [{}],
   },
   premiere_mort: {
@@ -62,13 +62,13 @@ let chaptersObj = {
   seconde_ile: {
     subtitle: "Emplacement de la deuxième île",
     text: ``,
-    img: "assets/",
+    img: "assets/emplacement.jpg",
     options: [{}],
   },
   premier_objet_un: {
     subtitle: "La clé",
     text: ``,
-    img: "assets/",
+    img: "assets/coffre.jpg",
     options: [{}],
   },
   premiere_mort_un: {
