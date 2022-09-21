@@ -50,7 +50,7 @@ let chaptersObj = {
   premiere_mort: {
     subtitle: "Empallé",
     text: ``,
-    img: "assets/",
+    img: "assets/empalement.png",
     options: [{}],
   },
   embranchement_deuxieme: {
@@ -74,7 +74,7 @@ let chaptersObj = {
   premiere_mort_un: {
     subtitle: "Empallé",
     text: ``,
-    img: "assets/",
+    img: "assets/empalement.png",
     options: [{}],
   },
   deuxieme_epreuve: {
@@ -86,19 +86,19 @@ let chaptersObj = {
   ile_finale: {
     subtitle: "Emplacement de l'île au trésor",
     text: ``,
-    img: "assets/",
+    img: "assets/carte_tresor.jpg",
     options: [{}],
   },
   second_objet: {
     subtitle: "La serrure",
     text: ``,
-    img: "assets/",
+    img: "assets/coffret.jpg",
     options: [{}],
   },
   deuxieme_mort: {
     subtitle: "Noyade",
     text: ``,
-    img: "assets/",
+    img: "assets/noyade.jfif",
     options: [{}],
   },
   seconde_epreuve: {
@@ -110,19 +110,19 @@ let chaptersObj = {
   ile_tresor: {
     subtitle: "Emplacement de l'île au trésor",
     text: ``,
-    img: "assets/",
+    img: "assets/carte_tresor.jpg",
     options: [{}],
   },
   deuxieme_objet: {
     subtitle: "La serrure",
     text: ``,
-    img: "assets/",
+    img: "assets/coffret.jpg",
     options: [{}],
   },
   seconde_mort: {
     subtitle: "Noyade",
     text: ``,
-    img: "assets/",
+    img: "assets/noyade.jfif",
     options: [{}],
   },
   epreuve_finale: {
