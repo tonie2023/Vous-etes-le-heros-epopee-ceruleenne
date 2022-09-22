@@ -32,7 +32,7 @@ let chaptersObj = {
   embranchement_premier: {
     subtitle: "Première énigme",
     text: ``,
-    img: "assets/",
+    img: "assets/enigme.jpg",
     options: [{}],
   },
   deuxieme_ile: {
@@ -56,7 +56,7 @@ let chaptersObj = {
   embranchement_deuxieme: {
     subtitle: "Première énigme",
     text: ``,
-    img: "assets/",
+    img: "assets/enigme.jpg",
     options: [{}],
   },
   seconde_ile: {
@@ -80,7 +80,7 @@ let chaptersObj = {
   deuxieme_epreuve: {
     subtitle: "Seconde énigme",
     text: ``,
-    img: "assets/",
+    img: "assets/enigme.jpg",
     options: [{}],
   },
   ile_finale: {
@@ -104,7 +104,7 @@ let chaptersObj = {
   seconde_epreuve: {
     subtitle: "Seconde énigme",
     text: ``,
-    img: "assets/",
+    img: "assets/enigme.jpg",
     options: [{}],
   },
   ile_tresor: {
@@ -128,43 +128,43 @@ let chaptersObj = {
   epreuve_finale: {
     subtitle: "Énigme finale",
     text: ``,
-    img: "assets/",
+    img: "assets/enigme.jpg",
     options: [{}],
   },
   tresor: {
     subtitle: "Emplacement du trésor",
     text: ``,
-    img: "assets/",
+    img: "assets/emplacement_final.jpg",
     options: [{}],
   },
   recommencer: {
     subtitle: "Mort brûlé",
     text: ``,
-    img: "assets/",
+    img: "assets/incineration.jpg",
     options: [{}],
   },
   obtention_objets: {
     subtitle: "Est-ce que vous avez récupéré les objets?",
     text: ``,
-    img: "assets/",
+    img: "assets/questionnement.jpg",
     options: [{}],
   },
   reprendre: {
     subtitle: "Il manque l'un des objets",
     text: ``,
-    img: "assets/",
+    img: "assets/recommencer.jpg",
     options: [{}],
   },
   tresor_retrouve: {
     subtitle: "Consécration de la quête",
     text: ``,
-    img: "assets/",
+    img: "assets/ouverture_coffre_tresor.jpg",
     options: [{}],
   },
   epilogue: {
     subtitle: "Célébration de l'équipage",
     text: ``,
-    img: "assets/",
+    img: "assets/celebration.jpg",
     options: [{}],
   },
 };
