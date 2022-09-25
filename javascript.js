@@ -1,7 +1,12 @@
 let chaptersObj = {
   prologue: {
     subtitle: "Éveil du capitaine",
-    text: ``,
+    text: `Sur une île, sur une plage au ciel azur, un homme se reposant dans un hamac s'éveilla.
+     "Ahhhhh, j'ai bien dormi, cela faisait longtemps que je n'ai eu une bonne nuit de sommeil. 
+     Oh, bonjour joueur(seuse), je n'avais pas pris conscience que tu étais arrivé. 
+     Je m'appelle Red D Hawk, je suis le capitaine du Silver Hawk et je m'apprête à aller en ville 
+     pour prendre mon premier repas de la journée. Suit moi, car on ne sait jamais quand une aventure 
+     peut nous tomber dessus!!!"`,
     img: "assets/plage.jpg",
     options: [
       {
