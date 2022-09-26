@@ -50,36 +50,65 @@ let chaptersObj = {
   },
   premier_choix: {
     subtitle: "Le guerrier et la navigatrice",
-    text: `Le capitaine vous invite à lire les fiches descriptives du guerrier et de la navigatrice.`,
+    text: `Le capitaine vous invite à lire les fiches descriptives du guerrier et de la navigatrice.
+    Le guerrier s'appelle Gedric, il a 26 ans. Gedric est un épéiste expert qui apprécie les bonnes batailles
+    et qui possède des qualités de stratèges. Fait intéressant : Il s'intéresse à la mythologie greco-romaine.
+    La navigatrice, quant à elle, se prénome Alicia, elle a 21 ans. Ne vous fiez à ce que vous lisez, malgré 
+    son jeune âge, elle possède un sens de l'orientation hors norme qui lui a permis de faire ses preuves en mer.
+    Fait intéressant : Il n'est pas rare de la voir le soir observer les étoiles avec un livre d'astronomie à côté d'elle.`,
     img: "assets/guerrier.jpg assets/navigatrice.jpg",
     options: [
       {
-        text: "",
-        action: "goToChapter(`embranchement_premier`)",
+        text: "Choisir",
+        action: "goToChapter(`selection_equipage`)",
       },
       {
-        text: "",
+        text: "Retour",
         action: "goToChapter(`equipage`)",
       },
     ],
   },
   deuxieme_choix: {
     subtitle: "La guérisseuse et le musicien",
-    text: ``,
+    text: `Le capitaine vous invite à lire les fiches descriptives de la guérisseuse et du musicien.
+    La guérisseuse s'appelle Annabelle, elle a 32 ans. Annabelle se spécialise dans le domaine de l'apothicaire,
+    se qui signifie qu'elle peut être considérée comme étant une experte des plantes médicinale. Ses connaissances
+    font d'elle, une allié de poids en cas d'attaque ennemi. Fait intéressant : Elle est épicurienne et elle s'intéresse aux épices.
+    Le musicien, quant à lui, se prénome Brook, il a 41 ans. Ce musicien traîne sa bosse depuis 20 ans. Il se vante notamment
+    d'avoir composé certaines chansons les plus populaires des 20 dernières années. Sa musique est un baume à la monotonie 
+    lors de longs jours en mer. Fait intéressant : Il dit connaitre la différence entre les divers types musicaux.`,
     img: "assets/guerrisseuse assets/musicien.jpg",
     options: [
       {
-        text: "",
-        action: "goToChapter(`embranchement_deuxieme`)",
+        text: "Choisir",
+        action: "goToChapter(`selection_equipage`)",
       },
       {
-        text: "",
+        text: "Retour",
         action: "goToChapter(`equipage`)",
       },
     ],
   },
+  selection_equipage: {
+    subtitle: "Départ vers l'aventure",
+    text: `Une fois le choix fait, l'équipage nouvellement formé se dirigea vers le bateau Silver Kawk. Une fois à bord, 
+    le capitaine prononça un discours : "Chers membres d'équipage, je vous remercie d'avoir accepté de prendre par à cette
+    aventure. Ce voyage sera perilleux, mais sera également source de richesse, car j'ai avec moi le premier indice pour
+    retrouver un fabuleux trésor perdu. Alors, courage matelots et partons à l'aventure!"`,
+    img: "assets/",
+    options: [
+      {
+        text: "Le guerrier et la navigatrice",
+        action: "goToChapter(`embranchement_premier`)",
+      },
+      {
+        text: "La guérisseuse et le musicien",
+        action: "goToChapter(`embranchement_deuxieme`)",
+      },
+    ],
+  },
   embranchement_premier: {
-    subtitle: "Première énigme",
+    subtitle: "Première épreuve",
     text: ``,
     img: "assets/enigme.jpg",
     options: [
@@ -94,7 +123,7 @@ let chaptersObj = {
     ],
   },
   deuxieme_ile: {
-    subtitle: "Emplacement de la deuxième île",
+    subtitle: "Première énigme",
     text: ``,
     img: "assets/emplacement.jpg",
     options: [
