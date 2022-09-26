@@ -1,54 +1,65 @@
 let chaptersObj = {
   prologue: {
     subtitle: "Éveil du capitaine",
-    text: `Sur une île, sur une plage au ciel azur, un homme se reposant dans un hamac s'éveilla.
-     "Ahhhhh, j'ai bien dormi, cela faisait longtemps que je n'ai eu une bonne nuit de sommeil. 
-     Oh, bonjour joueur(seuse), je n'avais pas pris conscience que tu étais arrivé. 
-     Je m'appelle Red D Hawk, je suis le capitaine du Silver Hawk et je m'apprête à aller en ville 
+    text: `Sur une île, sur une plage au ciel azur, un homme se reposant dans un hamac s'éveilla. "Ahhhhh, j'ai bien dormi, cela faisait longtemps que je n'ai eu une bonne nuit de sommeil. Oh, bonjour joueur(euse), je n'avais pas pris conscience que tu étais arrivé. 
+     Je m'appelle Red J Hawk, je suis le capitaine du Silver Hawk et je m'apprête à aller en ville 
      pour prendre mon premier repas de la journée. Suit moi, car on ne sait jamais quand une aventure 
      peut nous tomber dessus!!!"`,
     img: "assets/plage.jpg",
     options: [
       {
-        text: "",
+        text: "Suivre le capitaine",
         action: "goToChapter(`depart`)",
       },
     ],
   },
   depart: {
     subtitle: "Planification de l'aventure",
-    text: ``,
+    text: `Unr fois arrivé en ville, le capitaine Red J Hawk se dirigea vers la taverne de la ville pour y prendre son déjeuner.
+    Une fois attablé et après avoir commencé à manger, il s'interompit et se tourna vers le joueur(euse). "Tu te demandes sûrement pourquoi
+    nous sommes dans une taverne, alors laisse moi t'expliquer. Si nous sommes, ici, c'est pour recruter un équipage pour une aventure menant
+    à retrouver un fabuleux trésor perdu dont j'ai retrouvé le premier indice. Je suis à la recherche d'un équipage de 3 membres dont soit un 
+    guerrier et une navigatrice ou une guérisseuse et un musicien. Finalement, quant au troisième, il s'agit du poste de quartier-maître. Si tu es intéressé par l'aventure, je t'offre le poste.
+    Qu'en dis-tu? Est-ce que tu acceptes mon offre? "`,
     img: "assets/planification.gif",
     options: [
       {
-        text: "",
+        text: "J'accepte votre offre!",
         action: "goToChapter(`equipage`)",
       },
     ],
   },
   equipage: {
     subtitle: "Recrutement",
-    text: ``,
+    text: `Dans un coin de la taverne, il y a un panneau où il est possible de recruter des membres d'équipage.
+    À ce moment le capitaine Red J Hawk m'expliqua le fonctionnement du panneau de recrutement. "Écoute bien, comme je l'ai
+    dit plus tôt, je recherche un guerrier et une navigatrice ou une guérisseuse et un musicien. Chacun d'entre eux possèdent 
+    des caractéristiques et des qualités qui leurs sont propres. Alors, choisit bien, car si tu hésites tu peux toujours choisir l'autre
+    option. Mais, une fois que ton choix est fait, tu ne peux revenir en arrière!" Sachant cela que sera t'on choix?`,
     img: "assets/taverne.webp",
     options: [
       {
-        text: "",
+        text: "Choisir",
         action: "goToChapter(`premier_choix`)",
       },
       {
-        text: "",
+        text: "Choisir",
         action: "goToChapter(`deuxieme_choix`)",
       },
     ],
   },
   premier_choix: {
     subtitle: "Le guerrier et la navigatrice",
-    text: ``,
+    text: `Le capitaine vous invite à lire les fiches descriptives du guerrier et de la navigatrice.`,
     img: "assets/guerrier.jpg assets/navigatrice.jpg",
     options: [
       {
         text: "",
         action: "goToChapter(`embranchement_premier`)",
+      },
+      {
+        text: "",
+        action: "goToChapter(`equipage`)",
       },
     ],
   },
@@ -60,6 +71,10 @@ let chaptersObj = {
       {
         text: "",
         action: "goToChapter(`embranchement_deuxieme`)",
+      },
+      {
+        text: "",
+        action: "goToChapter(`equipage`)",
       },
     ],
   },
