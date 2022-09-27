@@ -94,7 +94,9 @@ let chaptersObj = {
     text: `Une fois le choix fait, l'équipage nouvellement formé se dirigea vers le bateau Silver Kawk. Une fois à bord, 
     le capitaine prononça un discours : "Chers membres d'équipage, je vous remercie d'avoir accepté de prendre par à cette
     aventure. Ce voyage sera perilleux, mais sera également source de richesse, car j'ai avec moi le premier indice pour
-    retrouver un fabuleux trésor perdu. Alors, courage matelots et partons à l'aventure!"`,
+    retrouver un fabuleux trésor perdu. Alors, courage matelots et partons à l'aventure!" Avant de véritablement commencer
+    votre aventure, il reste une dernière information vitale à vous transmettre. Les boutons ci-dessous représente votre
+    choix d'équipage, mais également la branche de l'histoire du jeu propre à votre choix plus haut.`,
     img: "assets/",
     options: [
       {
@@ -109,71 +111,91 @@ let chaptersObj = {
   },
   embranchement_premier: {
     subtitle: "Première épreuve",
-    text: ``,
+    text: `Félicitation chers joueurs(ses), votre aventure commence, ici, et maintenant! Le premier indice retrouvé par le
+    capitaine Red J hawk a révélé deux informations cruciales pour pouvoir retrouver le trésor perdu. Tout d'abord, il vous
+    faudra soit résoudre des énigmes ou retrouver certains objets magique essentiels pour pouvoir passer à la prochaine étape
+    de la quête. Mais, commençons par une énigme qui déterminera la suite de votre aventure : "On peut m'apercevoir sur une carte.
+    J'aide les marins à s'orienter en mer. Mais, pourtant on m'attribura le nom d'une fleur. Qui suis-je? "`,
     img: "assets/enigme.jpg",
     options: [
       {
-        text: "",
+        text: "Rose des vents",
         action: "goToChapter(`deuxieme_ile`)",
       },
       {
-        text: "",
+        text: "Vent rose",
         action: "goToChapter(`premier_objet`)",
       },
     ],
   },
   deuxieme_ile: {
     subtitle: "Première énigme",
-    text: ``,
+    text: `Sur le navire dans le quais de la ville, le capitaine énonça la première énigme permettant d'obtenir l'emplacement
+    de la deuxième île où est caché le second indice. Voici, l'énigme : On me voit sur la voute céleste. Je suis un amalgame 
+    d'étoile ayant la forme d'un instrument de cuisine. Pourtant, je suis plus grande que ma jumelle plus petite. Qui suis-je?
+    Alicia la navigatrice réfléchissant dit : "Est-ce que le nom de cet amalgame d'étoile pourrait être associé au monde animal
+    aquatique ou terrestre?"`,
     img: "assets/emplacement.jpg",
     options: [
       {
-        text: "",
+        text: "La Grande Ourse ",
         action: "goToChapter(`deuxieme_epreuve`)",
       },
       {
-        text: "",
+        text: "La petite Ourse",
         action: "goToChapter(`premiere_mort`)",
       },
     ],
   },
   premier_objet: {
     subtitle: "La clé",
-    text: ``,
+    text: `Sur le navire dans le quais de la ville, le capitaine énonça la première énigme permettant d'obtenir l'emplacement
+    de la deuxième île où est caché le second indice. Voici, l'énigme :  On me voit sur la voute céleste. Je suis un amalgame 
+    d'étoile ayant la forme d'un instrument de cuisine. Pourtant, je suis plus petite que ma jumelle plus grande. Qui suis-je?
+    Alicia la navigatrice réfléchissant dit : "Est-ce que le nom de cet amalgame d'étoile pourrait être associé au monde animal
+    aquatique ou terrestre?"`,
     img: "assets/coffre.jpg",
     options: [
       {
-        text: "",
+        text: "La Petite Ourse",
         action: "goToChapter(`deuxieme_epreuve`)",
       },
       {
-        text: "",
+        text: "L'étoile du nord",
         action: "goToChapter(`premiere_mort`)",
       },
     ],
   },
   premiere_mort: {
     subtitle: "Empallé",
-    text: ``,
+    text: `Étant toujours en réflexion pour résoudre l'énigme pour trouver l'emplacement de la seconde île ou du premier objet. 
+    Ils ne s'aperçurent pas de la présence sur le bateau qu'un équipage d'un autre bateau ayant ententu à la taverne le récit du capitaine sur
+    le premier indice pour retrouver un trésor était monté à bord. Discrètement, ils se positionnèrent et passèrent à l'acte, mais Gedric les ayant
+    aperçu il y a quelque instant s'écria : "NOUS SOMMES ATTAQUÉ!!!". Mais, avant que toi joueur(se) ait le temps de réagir, une lame d'épée t'empalla
+    par derrière au niveau du coeur causant une mort quasi instantanée.`,
     img: "assets/empalement.png",
     options: [
       {
-        text: "",
+        text: "Veuillez recommencer!",
         action: "goToChapter(`prologue`)",
       },
     ],
   },
   embranchement_deuxieme: {
     subtitle: "Première énigme",
-    text: ``,
+    text: `Félicitation chers joueurs(ses), votre aventure commence, ici, et maintenant! Le premier indice retrouvé par le
+    capitaine Red J hawk a révélé deux informations cruciales pour pouvoir retrouver le trésor perdu. Tout d'abord, il vous
+    faudra soit résoudre des énigmes ou retrouver certains objets magique essentiels pour pouvoir passer à la prochaine étape
+    de la quête. Mais, commençons par une énigme qui déterminera la suite de votre aventure : "On peut m'apercevoir sur une carte.
+    J'aide les marins à s'orienter en mer. Mais, pourtant on m'attribura le nom d'une fleur. Qui suis-je? "`,
     img: "assets/enigme.jpg",
     options: [
       {
-        text: "",
+        text: "Berceuse",
         action: "goToChapter(`seconde_ile`)",
       },
       {
-        text: "",
+        text: "Mélodie",
         action: "goToChapter(`premier_objet_un`)",
       },
     ],
@@ -210,7 +232,11 @@ let chaptersObj = {
   },
   premiere_mort_un: {
     subtitle: "Empallé",
-    text: ``,
+    text: `Étant toujours en réflexion pour résoudre l'énigme pour trouver l'emplacement de la seconde île ou du premier objet. 
+    Ils ne s'aperçurent pas de la présence sur le bateau qu'un équipage d'un autre bateau ayant ententu à la taverne le récit du capitaine sur
+    le premier indice pour retrouver un trésor était monté à bord. Discrètement, ils se positionnèrent et passèrent à l'acte, mais Gedric les ayant
+    aperçu il y a quelque instant s'écria : "NOUS SOMMES ATTAQUÉ!!!". Mais, avant que toi joueur(se) ait le temps de réagir, une lame d'épée t'empalla
+    par derrière au niveau du coeur causant une mort quasi instantanée.`,
     img: "assets/empalement.png",
     options: [
       {
@@ -221,7 +247,9 @@ let chaptersObj = {
   },
   deuxieme_epreuve: {
     subtitle: "Seconde énigme",
-    text: ``,
+    text: `Félicitation d'avoir résolu la première énigme! La première énigme sur premier indice s'effaça et prit la forme d'une carte indiquant l'emplacement
+    de la seconde île et du deuxième indice. Le capitaine s'écria : "En route moussaillons, cap sur la deuxième île, larguer les amarres!!!" Cela vous prit 6
+    jours pour arriver à destination.`,
     img: "assets/enigme.jpg",
     options: [
       {
@@ -288,7 +316,9 @@ let chaptersObj = {
   },
   ile_tresor: {
     subtitle: "Emplacement de l'île au trésor",
-    text: ``,
+    text: `Le deuxième indice retrouvé par le capitaine Red J hawk est une autre énigme disant ceci :
+    "On me chante à l'heure de dormir. Elle appaise l'angoisse'. Pourtant guérisseuses et musiciens
+    reconnaissent mes vertus et me chante. Qui suis-je?"`,
     img: "assets/carte_tresor.jpg",
     options: [
       {
@@ -394,7 +424,7 @@ let chaptersObj = {
     img: "assets/recommencer.jpg",
     options: [
       {
-        text: "",
+        text: "Partie terminé",
         action: "goToChapter(`prologue`)",
       },
     ],
@@ -405,7 +435,7 @@ let chaptersObj = {
     img: "assets/ouverture_coffre_tresor.jpg",
     options: [
       {
-        text: "",
+        text: "Trésor retrouvé!!!",
         action: "goToChapter(`epilogue`)",
       },
     ],
@@ -416,7 +446,7 @@ let chaptersObj = {
     img: "assets/celebration.jpg",
     options: [
       {
-        text: "",
+        text: "Recommencer",
         action: "goToChapter(`prologue`)",
       },
     ],
