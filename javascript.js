@@ -158,11 +158,23 @@ let chaptersObj = {
     options: [
       {
         text: "La Petite Ourse",
-        action: "goToChapter(`deuxieme_epreuve`)",
+        action: "goToChapter(`second_objet`)",
       },
       {
         text: "L'étoile du nord",
-        action: "goToChapter(`premiere_mort`)",
+        action: "goToChapter(`objet_introuvable`)",
+      },
+    ],
+  },
+  objet_introuvable: {
+    subtitle: "Clé introuvable",
+    text: `Vous n'avez pas réussi à obtenir la clé, mais en temps que maître du jeu je vous permet de continuer pour essayer de finir le jeu.
+    Voici les coordonnés de la prochaine île.`,
+    img: "assets/coffret.jpg",
+    options: [
+      {
+        text: "Vous n'avez pas réussi à obtenir la clé!",
+        action: "goToChapter(`second_objet`)",
       },
     ],
   },
@@ -186,46 +198,65 @@ let chaptersObj = {
     text: `Félicitation chers joueurs(ses), votre aventure commence, ici, et maintenant! Le premier indice retrouvé par le
     capitaine Red J hawk a révélé deux informations cruciales pour pouvoir retrouver le trésor perdu. Tout d'abord, il vous
     faudra soit résoudre des énigmes ou retrouver certains objets magique essentiels pour pouvoir passer à la prochaine étape
-    de la quête. Mais, commençons par une énigme qui déterminera la suite de votre aventure : ""`,
+    de la quête. Mais, commençons par une énigme qui déterminera la suite de votre aventure : "Depuis l'aube de la Renaissance,
+    on me convoite dans les pays d'Europe de l'Ouest. Nous venons par des routes terrestres ou maritimes. Pourtant les croyances
+    populaires à tort ou à raison surnomme deux pays comme étant : Le royaume des épices." Qui suis-je?`,
     img: "assets/enigme.jpg",
     options: [
       {
-        text: "",
+        text: "Inde",
         action: "goToChapter(`seconde_ile`)",
       },
       {
-        text: "",
+        text: "Japon",
         action: "goToChapter(`premier_objet_un`)",
       },
     ],
   },
   seconde_ile: {
     subtitle: "Emplacement de la deuxième île",
-    text: ``,
+    text: `Sur le navire dans le quais de la ville, le capitaine énonça la première énigme permettant d'obtenir l'emplacement
+    de la deuxième île où est caché le second indice. Voici, l'énigme : "Nous sommes deux épices de couleur orange et l'autre de couleur
+    jaune venant de l'Inde. Du point de vue médicale, Nous sommes bénéfique pour la santé. Pourtant, l'une d'entre nous est une seule épice
+    alors que l'autre est un mélange d'épice." Qui-suis-je?`,
     img: "assets/emplacement.jpg",
     options: [
       {
-        text: "",
-        action: "goToChapter(`deuxieme_epreuve`)",
+        text: "Curcuma",
+        action: "goToChapter(`seconde_epreuve`)",
       },
       {
-        text: "",
+        text: "Poudre de curry",
         action: "goToChapter(`premiere_mort_un`)",
       },
     ],
   },
   premier_objet_un: {
     subtitle: "La clé",
-    text: ``,
+    text: `Sur le navire dans le quais de la ville, le capitaine énonça la première énigme permettant d'obtenir l'emplacement
+    de la deuxième île où est caché le second indice. Voici, l'énigme : "Je suis un type de musique. Il est connu des marins.
+    Il est reconnu pour synchroniser et faire oublier la monotonie des voyages en mer." Qui suis-je?`,
     img: "assets/coffre.jpg",
     options: [
       {
-        text: "",
-        action: "goToChapter(`deuxieme_epreuve`)",
+        text: "Chants de marins",
+        action: "goToChapter(`deuxieme_objet`)",
       },
       {
-        text: "",
-        action: "goToChapter(`premiere_mort_un`)",
+        text: "Chants de travail",
+        action: "goToChapter(`objet_absent`)",
+      },
+    ],
+  },
+  objet_absent: {
+    subtitle: "Clé introuvable",
+    text: `Vous n'avez pas réussi à obtenir la clé, mais en temps que maître du jeu je vous permet de continuer pour essayer de finir le jeu.
+    Voici les coordonnés de la prochaine île.`,
+    img: "assets/coffret.jpg",
+    options: [
+      {
+        text: "Vous n'avez pas réussi à obtenir la clé!",
+        action: "goToChapter(`deuxième_objet`)",
       },
     ],
   },
@@ -239,77 +270,97 @@ let chaptersObj = {
     img: "assets/empalement.png",
     options: [
       {
-        text: "",
+        text: "Veuillez recommencer!",
         action: "goToChapter(`prologue`)",
       },
     ],
   },
   deuxieme_epreuve: {
-    subtitle: "Seconde énigme",
-    text: `Félicitation d'avoir résolu la première énigme! La première énigme sur premier indice s'effaça et prit la forme d'une carte indiquant l'emplacement
+    subtitle: "Seconde île",
+    text: `Félicitation d'avoir résolu la première énigme! La première énigme sur le premier indice s'effaça et prit la forme d'une carte indiquant l'emplacement
     de la seconde île et du deuxième indice. Le capitaine s'écria : "En route moussaillons, cap sur la deuxième île, larguer les amarres!!!" Cela vous prit 6
-    jours pour arriver à destination.`,
+    jours pour arriver à destination et quelques heures pour trouver l'indice.`,
     img: "assets/enigme.jpg",
     options: [
       {
-        text: "",
+        text: "Suivant",
         action: "goToChapter(`ile_finale`)",
-      },
-      {
-        text: "",
-        action: "goToChapter(`seconde_objet`)",
       },
     ],
   },
   ile_finale: {
     subtitle: "Emplacement de l'île au trésor",
-    text: ``,
+    text: `Une fois arrivé sur deuxième île. La carte indiqua l'emplacement du second indice. Après un périple dans la jungle, ils trouvèrent un coffre sur un autel.
+    En l'ouvrant, ils découvrirent le second indice. Le capitaine s'exclama et dit : "Nous l'avons trouvé moussaillons, le deuxième indice!".
+    Gedric dit : "Liser la nous capitaine!". Alors le capitaine la lisa à haute voix : "Nous sommes une seule et même déesse, mais avec des noms différents.
+    Nous sommes issues du monde gréco-romain. et pourtant, je porte le nom du ville." Qui suis-je?`,
     img: "assets/carte_tresor.jpg",
     options: [
       {
-        text: "",
+        text: "La déesse Athéna",
         action: "goToChapter(`epreuve_finale`)",
       },
       {
-        text: "",
+        text: "La déesse Minerve",
         action: "goToChapter(`deuxieme_mort`)",
       },
     ],
   },
   second_objet: {
     subtitle: "La serrure",
-    text: ``,
+    text: `Après avoir réussit l'énigme. le premier indice commença à changer de forme pour devenir une clé. Tout le monde en fut perplexe. Car, ils se demandèrent
+     comment feraient-ils pour atteindre la seconde île. C'est alors qu'ils virent la clé tournée sur elle-même pour finalement indiquer une direction. Le capitaine
+     s'exclama : "Mais, bien sûr! Cette clé ne nous donnes pas l'emplacement de la seconde île, mais elle nous indique la direction à suivre comme elle était une boussole.
+     Retournons au bateau matelots et suivons les directions de la clé!!!" Après un voyage de 8 jours à suivre les directions de la clé magique, ils arrivèrent à l'île et qui
+     par la suite les conduisit au second indice.
+     Le capitaine se mit à lire à haute voix : "Je fais partie du panthéon des dieux romains. On m'appel la protectrice de la Ville de Rome." Qui suis-je?`,
     img: "assets/coffret.jpg",
     options: [
       {
-        text: "",
-        action: "goToChapter(`epreuve_finale`)",
+        text: "La déesse Minerve",
+        action: "goToChapter(`obtention_objets`)",
       },
       {
-        text: "",
-        action: "goToChapter(`deuxieme_mort`)",
+        text: "La déesse Junon",
+        action: "goToChapter(`objet_manquant`)",
+      },
+    ],
+  },
+  objet_manquant: {
+    subtitle: "La serrure est introuvable",
+    text: `Vous n'avez pas réussi à obtenir la serrure, mais en temps que maître du jeu je vous permet de continuer pour essayer de finir le jeu.
+    Voici les coordonnés de la prochaine île.`,
+    img: "assets/coffret.jpg",
+    options: [
+      {
+        text: "Vous n'avez pas réussi à obtenir la serrure de coffre!",
+        action: "goToChapter(`obtention_objets`)",
       },
     ],
   },
   deuxieme_mort: {
     subtitle: "Noyade",
-    text: ``,
+    text: `En route depuis deux jours vers votre prochaine île, vous rencontrez une énorme tempête que vous ne pouvez pas éviter. Tout l'équipage du Silver Hawk est talentueux
+    et mène un combat de tout les instants dans la tempête. Mais, soudainement, une vague énorme frappe de plein fouet sur le flanc faisant chavirer le bateau.
+    Projeter à la mer, vous vous débater pour survivre, mais épuisés vous coulez et mourut noyés.`,
     img: "assets/noyade.jfif",
     options: [
       {
-        text: "",
+        text: "Veuillez recommencer!",
         action: "goToChapter(`prologue`)",
       },
     ],
   },
   seconde_epreuve: {
     subtitle: "Seconde énigme",
-    text: ``,
+    text: `Félicitation d'avoir résolu la première énigme! La première énigme sur le premier indice s'effaça et prit la forme d'une carte indiquant l'emplacement
+    de la seconde île et du deuxième indice. Le capitaine s'écria : "En route moussaillons, cap sur la deuxième île, larguer les amarres!!!" Cela vous prit 6
+    jours pour arriver à destination et quelques heures pour trouver le second indice.`,
     img: "assets/enigme.jpg",
     options: [
       {
-        text: "",
-        action: "goToChapter(`seconde_ile`)",
+        text: "Suivant",
+        action: "goToChapter(`ile_tresor`)",
       },
     ],
   },
@@ -321,105 +372,123 @@ let chaptersObj = {
     img: "assets/carte_tresor.jpg",
     options: [
       {
-        text: "",
+        text: "La berceuse",
         action: "goToChapter(`epreuve_finale`)",
       },
       {
-        text: "",
+        text: "La mélodie",
         action: "goToChapter(`seconde_mort`)",
       },
     ],
   },
   deuxieme_objet: {
     subtitle: "La serrure",
-    text: ``,
+    text: `Après avoir réussit l'énigme. le deuxième indice commença à changer de forme pour devenir une serrure de coffre. Tout le monde en fut perplexe. Car, ils se demandèrent
+    comment feraient-ils pour atteindre l'île au trésor. C'est alors qu'ils virent la serrure tournée sur elle-même pour finalement indiquer une direction. Le capitaine
+    s'exclama : "Mais, bien sûr! Cette serrure ne nous donnes pas l'emplacement de la seconde île, mais elle vibre et plus on se rapprochera de l'île et plus elle vibrera.
+    Retournons au bateau matelots et reprenons la mer!!!" Après un voyage de 8 jours à suivre les directions des vibrations de la serrure, ils arrivèrent à l'île et qui
+    par la suite les conduisit à l'indice final.
+    Le capitaine se mit à lire à haute voix : "Je suis une île où la musique et les pirates sont légions. On me donna un nom de reptile. Et pourtant, j'apparaît dans une série de
+    films," Qui suis-je?`,
     img: "assets/coffret.jpg",
     options: [
       {
-        text: "",
-        action: "goToChapter(`epreuve_finale`)",
+        text: "Île de Tortuga",
+        action: "goToChapter(`obtention_objets`)",
       },
       {
-        text: "",
-        action: "goToChapter(`seconde_mort`)",
+        text: "Île de la tortue",
+        action: "goToChapter(`objet_perdu`)",
       },
     ],
   },
   seconde_mort: {
     subtitle: "Noyade",
-    text: ``,
+    text: `En route depuis deux jours vers votre prochaine île, vous rencontrez une énorme tempête que vous ne pouvez pas éviter. Tout l'équipage du Silver Hawk est talentueux
+    et mène un combat de tout les instants dans la tempête. Mais, soudainement, une vague énorme frappe de plein fouet sur le flanc faisant chavirer le bateau.
+    Projeter à la mer, vous vous débater pour survivre, mais épuisés vous coulez et mourut noyés.`,
     img: "assets/noyade.jfif",
     options: [
       {
-        text: "",
+        text: "Veuillez recommencer!",
         action: "goToChapter(`prologue`)",
+      },
+    ],
+  },
+  objet_perdu: {
+    subtitle: "La serrure est introuvable",
+    text: `Vous n'avez pas réussi à obtenir la serrure, mais en temps que maître du jeu je vous permet de continuer pour essayer de finir le jeu.
+    Voici les coordonnés de la prochaine île.`,
+    img: "assets/coffret.jpg",
+    options: [
+      {
+        text: "Vous n'avez pas réussi à obtenir la serrure de coffre!",
+        action: "goToChapter(`obtention_objets`)",
       },
     ],
   },
   epreuve_finale: {
     subtitle: "Énigme finale",
-    text: ``,
+    text: `Félicitation!!! Vous voici, arriver à l'île au trésor. Mais attention chers joueurs(ses), pour il vous faudra résoudre l'énigme finale
+    pour que l'emplacement du trésor vous soit révélé. Ceci étant dit, il est temps de passer l'épreuve finale. Bonne chance!!!`,
     img: "assets/enigme.jpg",
     options: [
       {
-        text: "",
+        text: "Suivant",
         action: "goToChapter(`tresor)",
-      },
-      {
-        text: "",
-        action: "goToChapter(`obtention_objets`)",
       },
     ],
   },
   tresor: {
     subtitle: "Emplacement du trésor",
-    text: ``,
+    text: `Arrivé sur l'île au trésor et avoir retrouvé l'indice finale, le capitaine Red J Hawk dit : "Moussaillons, je suis fier de vous 
+    vous avez travaillé fort pour que nous puissions arriver, ici! Maintenant, il est temps de résoudre l'énigme finale : Je suis un explorateur 
+    du temps de la Renaissance voulant tracer une route pour le commerce des épices. Pour ce faire, je fis le tour du monde. Je suis originaire
+    du pays étant proche de l'Espagne." Qui suis-je?`,
     img: "assets/emplacement_final.jpg",
     options: [
       {
-        text: "",
+        text: "Ferdinand de Magellan",
         action: "goToChapter(`tresor_retrouve`)",
       },
       {
-        text: "",
+        text: "Christoph Colomb",
         action: "goToChapter(`recommencer`)",
       },
     ],
   },
   recommencer: {
     subtitle: "Mort brûlé",
-    text: ``,
+    text: `Toujours en réflexion pour résoudre l'énigme. Tout l'équipage décida d'aller faire une sieste dans les cabines du navire pour par la 
+    suite retenter la résolution de l'énigme. Or, pendant que tout le monde dormait, une étincelle d'une lampe mal fermée embrâsa le navire rapidement
+    et qui ne laissa aucune chance à l'équipage. Ils moururent brûlés vif.`,
     img: "assets/incineration.jpg",
     options: [
       {
-        text: "",
+        text: "Veuillez recommencer!",
         action: "goToChapter(`prologue`)",
       },
     ],
   },
   obtention_objets: {
     subtitle: "Est-ce que vous avez récupéré les objets?",
-    text: ``,
+    text: `Est-ce que vous avez réussit à récupérer les objets après la résolution des énigmes?`,
     img: "assets/questionnement.jpg",
     options: [
       {
-        text: "",
+        text: "Oui!",
         action: "goToChapter(`tresor_retrouve`)",
       },
       {
-        text: "",
-        action:
-          "goToChapter(`premier_objet`)" /*Poser question au professeur sur la possibilité avec javascript de reprendre une épreuve*/,
-      },
-      {
-        text: "",
+        text: "Non!",
         action: "goToChapter(`reprendre`)",
       },
     ],
   },
   reprendre: {
     subtitle: "Il manque l'un des objets",
-    text: ``,
+    text: `Malheureusement joueurs(ses), il est porté à mon attention qu'il vous manque soit un ou les deux objets(la clé et la serrure).
+    Par l'absence de l'un ou des deux objets, vous ne pouvez continuer plus loin. PARTIE TERMINÉE!!!`,
     img: "assets/recommencer.jpg",
     options: [
       {
@@ -430,7 +499,11 @@ let chaptersObj = {
   },
   tresor_retrouve: {
     subtitle: "Consécration de la quête",
-    text: ``,
+    text: `Après avoir réussit à résoudre l'énigme finale pour obtenir l'emplacement du trésor. Vous et le reste de l'équipage suivirent
+     la carte jusqu'à la découverte du trésor dans une grotte qui laissa tout le monde pantois. L'espace complet de la grotte était recouvert
+     de richesse allant de l'or aux pierres précieuses. Le capitaine submergé par l'émotion vacilla et tomba genoux et souffla : "Nous nous nous 
+     avons réussit!!! Le trésor est à nous, hahahahahah!!!" Le capitaine se releva et serra dans ses bras tout le monde. Se calmant, il dit: "Matelots,
+     embarquont toutes ces richesses puis retournont chez nous riches ahahahahah!!!".`,
     img: "assets/ouverture_coffre_tresor.jpg",
     options: [
       {
@@ -441,7 +514,14 @@ let chaptersObj = {
   },
   epilogue: {
     subtitle: "Célébration de l'équipage",
-    text: ``,
+    text: `De retour avec le bateau chargé du trésor. Tout l'équipage se dirigea vers la taverne poru célébrer ce dénouement euphorique.
+    Ils burent, mangèrent jusqu'à tard dans la nuit pour finalement s'endormir sur leur chaise. Quelques jours plus tard, le capitaine réunit
+    l'équipage, car il avait quelque chose à leur annoncer : "Chers membres de l'équipage, l'aventure que nous avons eu fut des plus exaltante. 
+    Mais, pendant ces quelques jours, j'ai mis la main sur une nouvelle quête qui cette fois nous mênera jusqu'au bout du monde pour retrouver
+    un trésor perdu depuis 1000 ans. Est-ce que vous êtes partant!?".
+
+    Pour savoir la réponse de l'équipage, il vous faudra attendre le prochain chapitre de mon jeu. Mais, en attendant, je vous remercie sincèrement
+    d'avoir joué à mon jeu en espérant que vous l'aviez apprécié!!!`,
     img: "assets/celebration.jpg",
     options: [
       {
