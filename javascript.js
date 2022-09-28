@@ -186,16 +186,15 @@ let chaptersObj = {
     text: `Félicitation chers joueurs(ses), votre aventure commence, ici, et maintenant! Le premier indice retrouvé par le
     capitaine Red J hawk a révélé deux informations cruciales pour pouvoir retrouver le trésor perdu. Tout d'abord, il vous
     faudra soit résoudre des énigmes ou retrouver certains objets magique essentiels pour pouvoir passer à la prochaine étape
-    de la quête. Mais, commençons par une énigme qui déterminera la suite de votre aventure : "On peut m'apercevoir sur une carte.
-    J'aide les marins à s'orienter en mer. Mais, pourtant on m'attribura le nom d'une fleur. Qui suis-je? "`,
+    de la quête. Mais, commençons par une énigme qui déterminera la suite de votre aventure : ""`,
     img: "assets/enigme.jpg",
     options: [
       {
-        text: "Berceuse",
+        text: "",
         action: "goToChapter(`seconde_ile`)",
       },
       {
-        text: "Mélodie",
+        text: "",
         action: "goToChapter(`premier_objet_un`)",
       },
     ],
