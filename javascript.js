@@ -99,6 +99,7 @@ let chaptersObj = {
     votre aventure, il reste une dernière information vitale à vous transmettre. Les boutons ci-dessous représente votre
     choix d'équipage, mais également la branche de l'histoire du jeu propre à votre choix plus haut.`,
     img: "assets/",
+    video: "assets/selection.mp4",
     options: [
       {
         text: "Le guerrier et la navigatrice",
@@ -155,7 +156,7 @@ let chaptersObj = {
     d'étoile ayant la forme d'un instrument de cuisine. Pourtant, je suis plus petite que ma jumelle plus grande. Qui suis-je?
     Alicia la navigatrice réfléchissant dit : "Est-ce que le nom de cet amalgame d'étoile pourrait être associé au monde animal
     aquatique ou terrestre?"`,
-    img: "assets/coffre.jpg",
+    img: "assets/enigme.jpg",
     options: [
       {
         text: "La Petite Ourse",
@@ -237,7 +238,7 @@ let chaptersObj = {
     text: `Sur le navire dans le quais de la ville, le capitaine énonça la première énigme permettant d'obtenir l'emplacement
     de la deuxième île où est caché le second indice. Voici, l'énigme : "Je suis un type de musique. Il est connu des marins.
     Il est reconnu pour synchroniser et faire oublier la monotonie des voyages en mer." Qui suis-je?`,
-    img: "assets/coffre.jpg",
+    img: "assets/enigme.jpg",
     options: [
       {
         text: "Chants de marins",
@@ -315,7 +316,7 @@ let chaptersObj = {
      Retournons au bateau matelots et suivons les directions de la clé!!!" Après un voyage de 8 jours à suivre les directions de la clé magique, ils arrivèrent à l'île et qui
      par la suite les conduisit au second indice.
      Le capitaine se mit à lire à haute voix : "Je fais partie du panthéon des dieux romains. On m'appel la protectrice de la Ville de Rome." Qui suis-je?`,
-    img: "assets/coffret.jpg",
+    img: "assets/cle.jpg",
     options: [
       {
         text: "La déesse Minerve",
@@ -391,7 +392,7 @@ let chaptersObj = {
     par la suite les conduisit à l'indice final.
     Le capitaine se mit à lire à haute voix : "Je suis une île où la musique et les pirates sont légions. On me donna un nom de reptile. Et pourtant, j'apparaît dans une série de
     films," Qui suis-je?`,
-    img: "assets/coffret.jpg",
+    img: "assets/serrure.jpg",
     options: [
       {
         text: "Île de Tortuga",
