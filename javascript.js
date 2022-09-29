@@ -57,7 +57,7 @@ let chaptersObj = {
     La navigatrice, quant à elle, se prénome Alicia, elle a 21 ans. Ne vous fiez à ce que vous lisez, malgré 
     son jeune âge, elle possède un sens de l'orientation hors norme qui lui a permis de faire ses preuves en mer.
     Fait intéressant : Il n'est pas rare de la voir le soir observer les étoiles avec un livre d'astronomie à côté d'elle.`,
-    img: "assets/guerrier.jpg assets/navigatrice.jpg",
+    img: "assets/guerrier.jpg",
     options: [
       {
         text: "Choisir",
@@ -78,7 +78,7 @@ let chaptersObj = {
     Le musicien, quant à lui, se prénome Brook, il a 41 ans. Ce musicien traîne sa bosse depuis 20 ans. Il se vante notamment
     d'avoir composé certaines chansons les plus populaires des 20 dernières années. Sa musique est un baume à la monotonie 
     lors de longs jours en mer. Fait intéressant : Il dit connaitre la différence entre les divers types musicaux.`,
-    img: "assets/guerrisseuse assets/musicien.jpg",
+    img: "assets/musicien.jpg",
     options: [
       {
         text: "Choisir",
