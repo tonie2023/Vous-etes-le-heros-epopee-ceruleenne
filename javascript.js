@@ -21,7 +21,8 @@ let chaptersObj = {
     à retrouver un fabuleux trésor perdu dont j'ai retrouvé le premier indice. Je suis à la recherche d'un équipage de 3 membres dont soit un 
     guerrier et une navigatrice ou une guérisseuse et un musicien. Finalement, quant au troisième, il s'agit du poste de quartier-maître. Si tu es intéressé par l'aventure, je t'offre le poste.
     Qu'en dis-tu? Est-ce que tu acceptes mon offre? "`,
-    img: "assets/planification.gif",
+    img: "assets/",
+    video: "assets/planification.mp4",
     options: [
       {
         text: "J'accepte votre offre!",
@@ -170,7 +171,7 @@ let chaptersObj = {
     subtitle: "Clé introuvable",
     text: `Vous n'avez pas réussi à obtenir la clé, mais en temps que maître du jeu je vous permet de continuer pour essayer de finir le jeu.
     Voici les coordonnés de la prochaine île.`,
-    img: "assets/coffret.jpg",
+    img: "assets/indecis.png",
     options: [
       {
         text: "Vous n'avez pas réussi à obtenir la clé!",
@@ -252,7 +253,7 @@ let chaptersObj = {
     subtitle: "Clé introuvable",
     text: `Vous n'avez pas réussi à obtenir la clé, mais en temps que maître du jeu je vous permet de continuer pour essayer de finir le jeu.
     Voici les coordonnés de la prochaine île.`,
-    img: "assets/coffret.jpg",
+    img: "assets/indecis.png",
     options: [
       {
         text: "Vous n'avez pas réussi à obtenir la clé!",
@@ -330,7 +331,7 @@ let chaptersObj = {
     subtitle: "La serrure est introuvable",
     text: `Vous n'avez pas réussi à obtenir la serrure, mais en temps que maître du jeu je vous permet de continuer pour essayer de finir le jeu.
     Voici les coordonnés de la prochaine île.`,
-    img: "assets/coffret.jpg",
+    img: "assets/indecis.png",
     options: [
       {
         text: "Vous n'avez pas réussi à obtenir la serrure de coffre!",
@@ -419,7 +420,7 @@ let chaptersObj = {
     subtitle: "La serrure est introuvable",
     text: `Vous n'avez pas réussi à obtenir la serrure, mais en temps que maître du jeu je vous permet de continuer pour essayer de finir le jeu.
     Voici les coordonnés de la prochaine île.`,
-    img: "assets/coffret.jpg",
+    img: "assets/indecis.png",
     options: [
       {
         text: "Vous n'avez pas réussi à obtenir la serrure de coffre!",
