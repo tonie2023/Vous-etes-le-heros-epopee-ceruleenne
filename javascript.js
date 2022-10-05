@@ -21,8 +21,7 @@ let chaptersObj = {
     à retrouver un fabuleux trésor perdu dont j'ai retrouvé le premier indice. Je suis à la recherche d'un équipage de 3 membres dont soit un 
     guerrier et une navigatrice ou une guérisseuse et un musicien. Finalement, quant au troisième, il s'agit du poste de quartier-maître. Si tu es intéressé par l'aventure, je t'offre le poste.
     Qu'en dis-tu? Est-ce que tu acceptes mon offre? "`,
-    img: "assets/",
-    video: "assets/planification.mp4",
+    img: "assets/planification.gif",
     options: [
       {
         text: "J'accepte votre offre!",
@@ -40,11 +39,11 @@ let chaptersObj = {
     img: "assets/taverne.webp",
     options: [
       {
-        text: "Choisir",
+        text: "Choix 1",
         action: "goToChapter(`premier_choix`)",
       },
       {
-        text: "Choisir",
+        text: "Choix 2",
         action: "goToChapter(`deuxieme_choix`)",
       },
     ],
@@ -78,7 +77,7 @@ let chaptersObj = {
     Le musicien, quant à lui, se prénome Brook, il a 41 ans. Ce musicien traîne sa bosse depuis 20 ans. Il se vante notamment
     d'avoir composé certaines chansons les plus populaires des 20 dernières années. Sa musique est un baume à la monotonie 
     lors de longs jours en mer. Fait intéressant : Il dit connaitre la différence entre les divers types musicaux.`,
-    img: "assets/musicien.jpg",
+    img: "assets/guerrisseuse.jpg",
     options: [
       {
         text: "Choisir",
@@ -98,8 +97,7 @@ let chaptersObj = {
     retrouver un fabuleux trésor perdu. Alors, courage matelots et partons à l'aventure!" Avant de véritablement commencer
     votre aventure, il reste une dernière information vitale à vous transmettre. Les boutons ci-dessous représente votre
     choix d'équipage, mais également la branche de l'histoire du jeu propre à votre choix plus haut.`,
-    img: "assets/",
-    video: "assets/selection.mp4",
+    img: "assets/decision.gif",
     options: [
       {
         text: "Le guerrier et la navigatrice",
@@ -258,7 +256,7 @@ let chaptersObj = {
     options: [
       {
         text: "Vous n'avez pas réussi à obtenir la clé!",
-        action: "goToChapter(`deuxième_objet`)",
+        action: "goToChapter(`deuxieme_objet`)",
       },
     ],
   },
@@ -437,7 +435,7 @@ let chaptersObj = {
     options: [
       {
         text: "Suivant",
-        action: "goToChapter(`tresor)",
+        action: "goToChapter(`tresor`)",
       },
     ],
   },
@@ -534,10 +532,22 @@ let chaptersObj = {
   },
 };
 function goToChapter(chapterName) {
-  const chapitre = chapterName;
-  console.log(chaptersObj[chapitre].subtitle);
-  console.log(chaptersObj[chapitre].text);
-  console.log(chaptersObj[chapitre].img);
-  console.log(chaptersObj[chapitre].options);
+  let chapitre = chaptersObj[chapterName];
+  let boite = document.querySelector(".texte");
+  boite.innerText = chapitre.text;
+  let sousTitre = document.querySelector(".subtitle");
+  sousTitre.innerText = chapitre.subtitle;
+  let image = document.querySelector(".image");
+  image.innerHTML = `<img src="${chaptersObj[chapterName].img}" alt="chapter_img"/>`;
+
+  let buttons = document.querySelector(".bouton");
+  let text = "";
+  chapitre.options.forEach(function (opt) {
+    text += `<button class="no1" onclick="${opt.action}">${opt.text}</button>`;
+  });
+  buttons.innerHTML = text;
+  console.log(chapitre.subtitle);
+  console.log(chapitre.text);
+  console.log(boite);
 }
-goToChapter();
+goToChapter("prologue");
