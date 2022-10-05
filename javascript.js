@@ -158,11 +158,11 @@ let chaptersObj = {
     options: [
       {
         text: "La Petite Ourse",
-        action: "goToChapter(`second_objet`)",
+        action: "second_objet",
       },
       {
         text: "L'étoile du nord",
-        action: "goToChapter(`objet_introuvable`)",
+        action: "impactKey()",
       },
     ],
   },
@@ -240,11 +240,11 @@ let chaptersObj = {
     options: [
       {
         text: "Chants de marins",
-        action: "goToChapter(`deuxieme_objet`)",
+        action: "deuxieme_objet",
       },
       {
         text: "Chants de travail",
-        action: "goToChapter(`objet_absent`)",
+        action: "impactKey()",
       },
     ],
   },
@@ -318,11 +318,11 @@ let chaptersObj = {
     options: [
       {
         text: "La déesse Minerve",
-        action: "goToChapter(`obtention_objets`)",
+        action: "deuxieme_objet",
       },
       {
         text: "La déesse Junon",
-        action: "goToChapter(`objet_manquant`)",
+        action: "impactLock()",
       },
     ],
   },
@@ -394,11 +394,11 @@ let chaptersObj = {
     options: [
       {
         text: "Île de Tortuga",
-        action: "goToChapter(`obtention_objets`)",
+        action: "obtention_objets",
       },
       {
         text: "Île de la tortue",
-        action: "goToChapter(`objet_perdu`)",
+        action: "impactLock()",
       },
     ],
   },
@@ -480,6 +480,10 @@ let chaptersObj = {
         action: "goToChapter(`tresor_retrouve`)",
       },
       {
+        text: "Ouais, j'ai les objets!",
+        action: "impactObject",
+      },
+      {
         text: "Non!",
         action: "goToChapter(`reprendre`)",
       },
@@ -531,6 +535,53 @@ let chaptersObj = {
     ],
   },
 };
+
+let keyRetrieve = 0;
+let lockRetrieve = 0;
+let objectRetrieve = 0;
+
+function key() {
+  keyRetrieve = 1;
+  goToChapter(`second_objet`);
+}
+
+function impactKey() {
+  if (keyRetrieve == true) {
+    goToChapter(`second_objet`);
+  } else if (keyRetrieve == false) {
+    goToChapter(`objet_perdu`);
+  }
+}
+
+function lock() {
+  lockRetrieve = 1;
+  goToChapter(`deuxieme_objet`);
+}
+
+function impactLock() {
+  if (lockRetrieve == true) {
+    goToChapter(`deuxieme_objet`);
+  } else if (lockRetrieve == false) {
+    goToChapter(`objet_manquant`);
+  }
+}
+
+function object() {
+  objectRetrieve = 2;
+  goToChapter(`tresor_retrouve`);
+}
+function impactObject() {
+  if (keyRetrieve == true && lockRetrieve == true) {
+    goToChapter(`tresor_retrouve`);
+  } else if (keyRetrieve == true && lockRetrieve == false) {
+    goToChapter(`reprendre`);
+  } else if (keyRetrieve == false && lockRetrieve == true) {
+    goToChapter(`reprendre`);
+  } else if (keyRetrieve == false && lockRetrieve == false) {
+    goToChapter(`reprendre`);
+  }
+}
+
 function goToChapter(chapterName) {
   let chapitre = chaptersObj[chapterName];
   let boite = document.querySelector(".texte");
