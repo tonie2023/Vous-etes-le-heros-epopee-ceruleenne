@@ -158,11 +158,11 @@ let chaptersObj = {
     options: [
       {
         text: "La Petite Ourse",
-        action: "second_objet",
+        action: "key1()",
       },
       {
         text: "L'étoile du nord",
-        action: "impactKey()",
+        action: "key()",
       },
     ],
   },
@@ -240,11 +240,11 @@ let chaptersObj = {
     options: [
       {
         text: "Chants de marins",
-        action: "deuxieme_objet",
+        action: "key3()",
       },
       {
         text: "Chants de travail",
-        action: "impactKey()",
+        action: "key2()",
       },
     ],
   },
@@ -318,11 +318,11 @@ let chaptersObj = {
     options: [
       {
         text: "La déesse Minerve",
-        action: "deuxieme_objet",
+        action: "lock1()",
       },
       {
         text: "La déesse Junon",
-        action: "impactLock()",
+        action: "lock()",
       },
     ],
   },
@@ -394,11 +394,11 @@ let chaptersObj = {
     options: [
       {
         text: "Île de Tortuga",
-        action: "obtention_objets",
+        action: "lock3()",
       },
       {
         text: "Île de la tortue",
-        action: "impactLock()",
+        action: "lock2()",
       },
     ],
   },
@@ -477,15 +477,15 @@ let chaptersObj = {
     options: [
       {
         text: "Oui!",
-        action: "goToChapter(`tresor_retrouve`)",
+        action: "objects()",
       },
       {
         text: "Ouais, j'ai les objets!",
-        action: "impactObject",
+        action: "objects1()",
       },
       {
         text: "Non!",
-        action: "goToChapter(`reprendre`)",
+        action: "objects1()",
       },
     ],
   },
@@ -537,48 +537,115 @@ let chaptersObj = {
 };
 
 let keyRetrieve = 0;
+let keyFounded = 0;
 let lockRetrieve = 0;
-let objectRetrieve = 0;
+let lockFounded = 0;
 
 function key() {
-  keyRetrieve = 1;
-  goToChapter(`second_objet`);
+  keyRetrieve = 0;
+  if (keyRetrieve == false) {
+    goToChapter(`objet_introuvable`);
+  } else {
+    goToChapter(`second_objet`);
+  }
 }
 
-function impactKey() {
+function key1() {
+  keyRetrieve = 1;
   if (keyRetrieve == true) {
     goToChapter(`second_objet`);
-  } else if (keyRetrieve == false) {
-    goToChapter(`objet_perdu`);
+  } else {
+    goToChapter(`objet_introuvable`);
+  }
+}
+
+function key2() {
+  keyFounded = 0;
+  if (keyFounded == false) {
+    goToChapter(`objet_absent`);
+  } else {
+    goToChapter(`deuxieme_objet`);
+  }
+}
+
+function key3() {
+  keyFounded = 1;
+  if (keyFounded == true) {
+    goToChapter(`deuxieme_objet`);
+  } else {
+    goToChapter(`objet_absent`);
   }
 }
 
 function lock() {
-  lockRetrieve = 1;
-  goToChapter(`deuxieme_objet`);
+  lockRetrieve = 0;
+  if (lockRetrieve == false) {
+    goToChapter(`objet_manquant`);
+  } else {
+    goToChapter(`obtention_objets`);
+  }
 }
 
-function impactLock() {
+function lock1() {
+  lockRetrieve = 1;
   if (lockRetrieve == true) {
-    goToChapter(`deuxieme_objet`);
-  } else if (lockRetrieve == false) {
+    goToChapter(`obtention_objets`);
+  } else {
     goToChapter(`objet_manquant`);
   }
 }
 
-function object() {
-  objectRetrieve = 2;
-  goToChapter(`tresor_retrouve`);
+function lock2() {
+  lockFounded = 0;
+  if (lockFounded == false) {
+    goToChapter(`objet_manquant`);
+  } else {
+    goToChapter(`obtention_objets`);
+  }
 }
-function impactObject() {
+
+function lock3() {
+  lockFounded = 1;
+  if (lockFounded == true) {
+    goToChapter(`obtention_objets`);
+  } else {
+    goToChapter(`objet_manquant`);
+  }
+}
+
+function objects() {
   if (keyRetrieve == true && lockRetrieve == true) {
     goToChapter(`tresor_retrouve`);
+  } else if (keyFounded == true && lockFounded == true) {
+    goToChapter(`tresor_retrouve`);
+  } else if (keyRetrieve == true && lockRetrieve == false) {
+    goToChapter(`reprendre`);
+  } else if (keyFounded == true && lockFounded == false) {
+    goToChapter(`reprendre`);
+  } else if (keyRetrieve == false && lockRetrieve == true) {
+    goToChapter(`reprendre`);
+  } else if (keyFounded == false && lockFounded == true) {
+    goToChapter(`reprendre`);
+  } else {
+    goToChapter(`reprendre`);
+  }
+}
+
+function objects1() {
+  if (keyRetrieve == false && lockRetrieve == false) {
+    goToChapter(`reprendre`);
+  } else if (keyFounded == false && lockFounded == false) {
+    goToChapter(`reprendre`);
   } else if (keyRetrieve == true && lockRetrieve == false) {
     goToChapter(`reprendre`);
   } else if (keyRetrieve == false && lockRetrieve == true) {
     goToChapter(`reprendre`);
-  } else if (keyRetrieve == false && lockRetrieve == false) {
+  } else if (keyFounded == true && lockFounded == false) {
     goToChapter(`reprendre`);
+  } else if (keyFounded == false && lockFounded == true) {
+    goToChapter(`reprendre`);
+  } else {
+    goToChapter(`tresor_retrouve`);
   }
 }
 
