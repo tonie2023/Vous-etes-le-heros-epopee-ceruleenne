@@ -37,6 +37,15 @@ img {
   min-width: 300px;
   height: 300px;
 }
+.video {
+  position: relative;
+  bottom: 13px;
+  object-fit: fill;
+  margin: auto;
+  border-radius: 15px 15px 15px 15px;
+  min-width: 300px;
+  height: 300px;
+}
 .titre {
   display: flex;
 }
