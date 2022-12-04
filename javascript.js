@@ -149,7 +149,7 @@ let chaptersObj = {
     options: [
       {
         text: "Veuillez recommencer!",
-        action: "goToChapter(`prologue`)",
+        action: "reset()",
       },
     ],
   },
@@ -218,7 +218,7 @@ let chaptersObj = {
     options: [
       {
         text: "Veuillez recommencer!",
-        action: "goToChapter(`prologue`)",
+        action: "reset()",
       },
     ],
   },
@@ -282,7 +282,7 @@ let chaptersObj = {
     options: [
       {
         text: "Veuillez recommencer!",
-        action: "goToChapter(`prologue`)",
+        action: "reset()",
       },
     ],
   },
@@ -334,7 +334,7 @@ let chaptersObj = {
     options: [
       {
         text: "Veuillez recommencer!",
-        action: "goToChapter(`prologue`)",
+        action: "reset()",
       },
     ],
   },
@@ -383,7 +383,7 @@ let chaptersObj = {
     options: [
       {
         text: "Veuillez recommencer!",
-        action: "goToChapter(`prologue`)",
+        action: "reset()",
       },
     ],
   },
@@ -413,7 +413,7 @@ let chaptersObj = {
     options: [
       {
         text: "Partie terminé",
-        action: "goToChapter(`prologue`)",
+        action: "reset()",
       },
     ],
   },
@@ -424,7 +424,7 @@ let chaptersObj = {
     options: [
       {
         text: "Partie terminé",
-        action: "goToChapter(`prologue`)",
+        action: "reset()",
       },
     ],
   },
@@ -446,7 +446,7 @@ let chaptersObj = {
     options: [
       {
         text: "Recommencer",
-        action: "goToChapter(`prologue`)",
+        action: "reset()",
       },
     ],
   },
@@ -673,6 +673,36 @@ function goToChapter(chapterName) {
     audio3.play();
   }
 }
+
+const choixSonore = document.querySelector("#son");
+choixSonore.addEventListener("change", function () {
+  if (choixSonore.checked != true) {
+    audio.volume = 0;
+    audio1.volume = 0;
+    audio2.volume = 0;
+    audio3.volume = 0;
+    audio4.volume = 0;
+  } else {
+    audio.volume = 1;
+    audio1.volume = 1;
+    audio2.volume = 1;
+    audio3.volume = 1;
+    audio4.volume = 1;
+  }
+});
+
+function reset() {
+  faction = false;
+  localStorage.clear();
+  goToChapter("prologue");
+}
+
+const reinitialiser = document.querySelector(".reinitialiser");
+reinitialiser.addEventListener("click", function () {
+  reset();
+});
+console.log(reinitialiser);
+
 if (localStorage.getItem("chapitre") != undefined) {
   goToChapter(localStorage.getItem("chapitre"));
 } else {

@@ -103,6 +103,10 @@ h2,
 .bouton {
   order: -2;
 }
+.boite,
+.revisionChoix {
+  order: -3;
+}
 .bouton {
   display: flex;
   justify-content: space-between;
@@ -120,7 +124,7 @@ h2,
 }
 button {
   position: relative;
-  bottom: 12px;
+  bottom: 15px;
   font-family: lato, sans-serif;
   font-weight: bold;
   background-color: #007fff;
@@ -132,4 +136,23 @@ button {
 }
 button:hover {
   background: #286185;
+}
+#son {
+  position: relative;
+  left: -186px;
+  top: -5px;
+}
+.sons {
+  position: relative;
+  left: -233px;
+  top: -7px;
+  font-family: lato, sans-serif;
+  color: white;
+  font-weight: bold;
+}
+.reinitialiser {
+  position: relative;
+  left: 215.5px;
+  top: -8.5px;
+  color: white;
 }
