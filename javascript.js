@@ -1,4 +1,15 @@
 let chaptersObj = {
+  didacticiel: {
+    subtitle: "Didacticiel",
+    text: `Bienvenue chers joueurs et joueuses dans le jeu: Épopée céruléenne! Il s'agit d'un jeu de style narratif avec choix de réponses. À l'intérieur du jeu, vous aurez le choix entre deux embranchements, mais faites votre choix judicieusement, car le chemin emprunté sera parsementé d'énigme à résoudre!`,
+    img: "assets/didacticiel.gif",
+    options: [
+      {
+        text: "Commencer!!!",
+        action: "goToChapter(`prologue`)",
+      },
+    ],
+  },
   prologue: {
     subtitle: "Éveil du capitaine",
     text: `Sur une île, sur une plage au ciel azur, un homme se reposant dans un hamac s'éveilla. "Ahhhhh, j'ai bien dormi, cela faisait longtemps que je n'ai eu une bonne nuit de sommeil. Oh, bonjour joueur(euse), je n'avais pas pris conscience que tu étais arrivé. 
@@ -694,7 +705,7 @@ choixSonore.addEventListener("change", function () {
 function reset() {
   faction = false;
   localStorage.clear();
-  goToChapter("prologue");
+  goToChapter("didacticiel");
 }
 
 const reinitialiser = document.querySelector(".reinitialiser");
@@ -706,11 +717,11 @@ console.log(reinitialiser);
 if (localStorage.getItem("chapitre") != undefined) {
   goToChapter(localStorage.getItem("chapitre"));
 } else {
-  goToChapter("prologue");
+  goToChapter("didacticiel");
   console.log(goToChapter);
 }
 
-let chapitreDebut = "prologue";
+let chapitreDebut = "didacticiel";
 if (localStorage.getItem("chapitre") != null) {
   chapitreDebut = localStorage.getItem("chapitre");
 }
