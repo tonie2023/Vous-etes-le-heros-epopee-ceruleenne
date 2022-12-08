@@ -633,6 +633,7 @@ function objects1() {
 }
 
 function goToChapter(chapterName) {
+  console.log(chapterName);
   let chapitre = chaptersObj[chapterName];
   localStorage.setItem("chapitre", chapterName);
 
@@ -743,4 +744,4 @@ let chapitreDebut = "didacticiel";
 if (localStorage.getItem("chapitre") != null) {
   chapitreDebut = localStorage.getItem("chapitre");
 }
-goToChapter("chapitreDebut");
+goToChapter("didacticiel");
