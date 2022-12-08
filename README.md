@@ -6,7 +6,7 @@
 **Inspiration : [One Piece](https://one-piece.com/)**<br>
 **Palette de couleurs : [Coolors.co](https://coolors.co/007fff-3894b2-286185-000000-ffffff)**<br>
 
-**En ligne** : **[Épopée céruléenne](https://github.com/tonie2023/Vous-etes-le-heros-epopee-ceruleenne)**
+**En ligne** : **[Épopée céruléenne](https://tonie2023.github.io/Vous-etes-le-heros-epopee-ceruleenne/)**
 
 ## **Diagramme**
 
