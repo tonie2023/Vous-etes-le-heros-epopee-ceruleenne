@@ -473,6 +473,7 @@ let audio1 = new Audio("assets/incredule.mp3");
 let audio2 = new Audio("assets/surpris.mp3");
 let audio3 = new Audio("assets/beep.mp3");
 let audio4 = new Audio("assets/victoire.mp3");
+let audio5 = new Audio("assets/mort.mp3");
 
 function key() {
   keyRetrieve = 0;
@@ -679,6 +680,21 @@ function goToChapter(chapterName) {
   } else if (body.classList.contains("tresor_retrouve")) {
     audio4.currentTime = 0;
     audio4.play();
+  } else if (body.classList.contains("premiere_mort")) {
+    audio5.currentTime = 0;
+    audio5.play();
+  } else if (body.classList.contains("premiere_mort_un")) {
+    audio5.currentTime = 0;
+    audio5.play();
+  } else if (body.classList.contains("deuxieme_mort")) {
+    audio5.currentTime = 0;
+    audio5.play();
+  } else if (body.classList.contains("seconde_mort")) {
+    audio5.currentTime = 0;
+    audio5.play();
+  } else if (body.classList.contains("recommencer")) {
+    audio5.currentTime = 0;
+    audio5.play();
   } else {
     audio3.currentTime = 0;
     audio3.play();
@@ -693,12 +709,14 @@ choixSonore.addEventListener("change", function () {
     audio2.volume = 0;
     audio3.volume = 0;
     audio4.volume = 0;
+    audio5.volume = 0;
   } else {
     audio.volume = 1;
     audio1.volume = 1;
     audio2.volume = 1;
     audio3.volume = 1;
     audio4.volume = 1;
+    audio5.volume = 1;
   }
 });
 
