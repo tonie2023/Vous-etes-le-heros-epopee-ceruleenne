@@ -744,4 +744,4 @@ let chapitreDebut = "didacticiel";
 if (localStorage.getItem("chapitre") != null) {
   chapitreDebut = localStorage.getItem("chapitre");
 }
-goToChapter("didacticiel");
+goToChapter("chapitreDebut");
